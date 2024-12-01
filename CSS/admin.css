@@ -1,0 +1,418 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2e2e2e;
+    color: white;
+    display: flex;
+     /* Center horizontally */
+    align-items: flex-start; /* Align top for better readability */
+    height: 100vh;           /* Full viewport height */
+    padding: 40px 20px;      /* Increase padding for PC view */
+    flex-direction: column;
+    overflow: auto;
+}
+
+/* Top Navigation Bar */
+.top-nav {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    padding: 15px;
+    width: 100%;
+    z-index: 10;
+    justify-content: flex-start; /* Align items to the left */
+    position: fixed;            /* Fix the nav bar at the top */
+    top: 0;                     /* Set the nav bar at the very top */
+    left: 0;                    /* Ensure it's aligned to the left edge */
+    right: 0;                   /* Ensure it stretches to the right edge */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Optional: Adds shadow for better separation */
+}
+
+/* Wrapper for logo and brand name */
+.top-nav .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.top-nav .logo {
+    width: 40px;
+    height: auto;
+    margin-right: 10px; /* Space between the logo and the brand name */
+}
+
+.top-nav .brand-name {
+    color: #ff8c00;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+/* Player Container */
+.player-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    width: 100%;
+    max-width: 600px; /* Adjust for wider layout */
+    padding: 15px;
+    height: 120px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 100px; /* Adjust for fixed navigation bar */
+    flex: 1;
+    overflow: hidden; /* Ensure content does not overflow */
+}
+
+.player-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.player-id,
+.player-lvl {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.player-details p {
+    margin: 5px 0;
+}
+
+.player-name,
+.daily-profit,
+.todays-profit,
+.daily-commission {
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* Player Image */
+.player-image {
+    flex-shrink: 0;
+    width: 80px;
+    height: 100%; /* Adjust to container height */
+}
+
+.player-image .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Menu Container */
+.menu-container {
+    background: #333;
+    width: 100%;
+   
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+}
+
+/* Item Container */
+.item-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 600px; /* Adjust width */
+    width: 100%;
+}
+
+/* Item Image */
+.item-image img {
+    width: 60px; /* Larger size for item image */
+    height: auto;
+}
+
+/* Item Details */
+.item-details {
+    flex: 1;
+    text-align: center;
+}
+
+.item-name {
+    font-size: 20px; /* Increase font size */
+    font-weight: bold;
+    color: #fff;
+}
+
+.item-info,
+.item-daily {
+    font-size: 16px;
+    color: #ccc;
+}
+
+/* Buy Button */
+.buy-button {
+    text-align: center;
+}
+
+.btn-buy {
+    background-color: #ff8c00;
+    color: white;
+    border: none;
+    padding: 12px 24px; /* Larger padding */
+    font-size: 18px; /* Larger font size */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-buy:hover {
+    background-color: #e87c00;
+}
+
+/* Bottom Navigation Bar */
+.bottom-nav {
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px; /* Adjust for larger screens */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #444;
+    z-index: 10;
+}
+
+/* Navigation Items */
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.nav-icon {
+    width: 40px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.nav-label {
+    font-size: 16px; /* Increase font size for readability */
+    color: #ddd;
+}
+
+/* Ensure there's space between bottom nav and content */
+body {
+    padding-bottom: 80px; /* Increased padding for bottom nav */
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 70%;
+    max-width: 600px; /* Increased width for larger screens */
+    padding: 30px; /* More padding for modal */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.modal-close {
+    background-color: #ff8c00;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.modal-close:hover {
+    background-color: #e87c00;
+}
+  /* Card container style */
+        .card {
+            background-color: #444;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            text-align: left;
+        }
+
+        .card h3 {
+            color: #ff8c00;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        /* Button style inside the card */
+        .card-button {
+            background-color: #ff8c00;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 10px;
+            width: 200px;
+        }
+
+        .card-button:hover {
+            background-color: #e87c00;
+        }
+
+        /* Button container to align buttons */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        td {
+            background-color: #444;
+            color: white;
+        }
+
+        .recharged-btn, .decline-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .recharged-btn {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .recharged-btn:hover {
+            background-color: #218838;
+        }
+
+        .decline-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .decline-btn:hover {
+            background-color: #c82333;
+        }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .pagination a {
+            padding: 10px 15px;
+            margin: 0 5px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .pagination a:hover {
+            background-color: #ff8c00;
+        }
+      /* General Input Styles */
+input {
+    width: 15%;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 2px solid #444;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Focused input styles with the .focused class */
+input.focused {
+    border-color: #ff8c00; /* Keep orange border */
+    background-color: #555;
+}
+
+input:focus {
+    outline: none;
+    border-color: #ff8c00;
+    background-color: #555;
+}
+
+/* Placeholder text styling */
+input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Input styles for error and success states */
+input.error {
+    border-color: #dc3545;
+    background-color: #f8d7da;
+    color: #dc3545;
+}
+
+input.error::placeholder {
+    color: #dc3545;
+}
+
+input.success {
+    border-color: #28a745;
+    background-color: #d4edda;
+    color: #28a745;
+}
+
+input.success::placeholder {
+    color: #28a745;
+}

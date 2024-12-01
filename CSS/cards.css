@@ -1,0 +1,200 @@
+   /* Card Layout Styling */
+.user-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.user-card {
+    background-color: #444;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: Left;
+    transition: transform 0.3s ease;
+}
+
+.user-card:hover {
+    transform: scale(1.05);
+}
+
+/* Button Styling (for View and Gift) */
+.view-button, .gift-button {
+     justify-content: center;
+    display: inline-block;
+    margin-top: 5px;
+    padding: 5px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+.view-button:hover, .gift-button:hover {
+    background-color: #0056b3;
+}
+
+/* Specific button color for Gift */
+.gift-button {
+    background-color: #ff8c00;
+
+}
+
+.gift-button:hover {
+    background-color: #e87c00;
+}
+
+/* Button Image Styling */
+.view-button img, .gift-button img {
+    width: 15px; /* Adjust size of the image */
+    height: auto;
+    vertical-align: middle; /* Align image with the text (if any) */
+}
+
+/* Remove text from buttons and keep only images */
+.view-button span, .gift-button span {
+    display: none; /* Hide text */
+}
+
+/* Referral Link Styling */
+.referral-link {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #444;
+    color: white;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+/* Copy Button Styling */
+.copy-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff8c00;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.copy-button:hover {
+    background-color: #e87c00;
+}
+/* Adjust card layout for image and text */
+.card-content {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between image and text */
+}
+
+/* Image Styling */
+.quest-image {
+    width: 80px; /* Set desired image size */
+    height: 80px;
+    border-radius: 10px; /* Optional: Make the image corners rounded */
+    object-fit: cover; /* Ensure the image fits within the given dimensions */
+}
+
+/* Text next to the image */
+.card-text {
+    flex: 1; /* Allow text to take up the remaining space */
+}
+/* Styling for the Hunt Button */
+.hunt-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hunt-button:hover {
+    background-color: #0056b3;
+}
+
+/* Styling when the button is disabled and claimed */
+.hunt-button.claimed {
+    background-color: gray;
+    cursor: not-allowed;
+}
+/* Card Layout Styling */
+.user-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.user-card {
+    background-color: #444;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Stacked vertically */
+}
+
+/* Card Content - Align the button to the right */
+.card-content {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between image, text, and button */
+    flex-direction: row; /* Horizontal layout for image, text, and button */
+    justify-content: space-between; /* Ensures space between image+text and button */
+}
+
+/* Button Styling (Hunt Button on the right) */
+.hunt-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center; /* Center the button vertically within the card */
+}
+
+.hunt-button:hover {
+    background-color: #0056b3;
+}
+
+/* Styling when the button is disabled and claimed */
+.hunt-button.claimed {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+/* Image Styling */
+.quest-image {
+    width: 80px; /* Set desired image size */
+    height: 80px;
+    border-radius: 10px; /* Optional: Make the image corners rounded */
+    object-fit: cover; /* Ensure the image fits within the given dimensions */
+}
+
+/* Text next to the image */
+.card-text {
+    flex: 1; /* Allow text to take up the remaining space */
+}

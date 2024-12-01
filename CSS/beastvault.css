@@ -1,0 +1,442 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2e2e2e;
+    color: white;
+    display: flex;
+    justify-content: flex-start;  /* Center horizontally */
+    align-items: center;          /* Center vertically */
+    height: 100vh;            /* Full viewport height */
+    padding: 20px;
+    flex-direction: column;
+overflow: auto;
+}
+
+
+
+/* Top Navigation Bar */
+.top-nav {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    padding: 15px;
+    width: 100%;
+    z-index: 10;
+    justify-content: flex-start; /* Align items to the left */
+    position: fixed;   /* Fix the nav bar at the top */
+    top: 0;            /* Set the nav bar at the very top */
+    left: 0;           /* Ensure it's aligned to the left edge */
+    right: 0;          /* Ensure it stretches to the right edge */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Optional: Adds shadow for better separation */
+}
+
+/* Wrapper for logo and brand name */
+.top-nav .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.top-nav .logo {
+    width: 40px;
+    height: auto;
+    margin-right: 10px; /* Space between the logo and the brand name */
+}
+
+.top-nav .brand-name {
+    color: #ff8c00;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+
+
+
+
+
+
+
+/* Player Container */
+.player-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    width: 100%;
+    max-width: 400px; /* Match the width of the login container */
+    padding: 15px; /* Reduced padding for smaller height */
+    height: 120px; /* Set a smaller height */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 80px; /* Adjust the margin from the top */
+    flex: 1;
+    overflow: hidden; /* Ensure content does not overflow */
+}
+
+.player-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.player-id,
+.player-lvl {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.player-details p {
+    margin: 5px 0;
+}
+
+.player-name,
+.daily-profit,
+.todays-profit,
+.daily-commission {
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* Player Image */
+.player-image {
+    flex-shrink: 0;
+    width: 80px; /* Adjusted size */
+    height: 20%; /* Adjust to container height */
+}
+
+.player-image .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Login Container */
+.login-container {
+    background: #333;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    box-sizing: border-box;
+}
+/* Login Container */
+.menu-container {
+    background: #333;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    box-sizing: border-box;
+    margin-bottom: 150px; /* Ensure that there is enough space at the bottom */
+    position: relative; /* Ensures it positions itself relative to its normal flow */
+}
+.menu-container-bottom {
+    background: #333;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    box-sizing: border-box;
+    margin-top: 100px;
+  
+}
+/* Item Container */
+.item-container {
+    display: flex;
+    align-items: center; /* Vertically align items in the container */
+    justify-content: space-between; /* Distribute space between the image, details, and button */
+    background-color: #333;
+    padding: 15px;
+    margin-top: 20px; /* Add top margin as requested */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 500px; /* Adjust width as needed */
+    width: 100%;
+}
+
+/* Item Image */
+.item-image img {
+    width: 50px; /* Set the size of the item image */
+    height: auto;
+}
+
+/* Item Details */
+.item-details {
+    flex: 1; /* Take available space between image and button */
+    text-align: center;
+}
+
+.item-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.item-info,
+.item-daily {
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Buy Button */
+.buy-button {
+    text-align: center;
+}
+
+.btn-buy {
+    background-color: #ff8c00; /* Same color as H1 */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-buy:hover {
+    background-color: #e87c00;
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.brand-name {
+    color: #ff8c00;
+    font-weight: bold;
+}
+
+.tagline {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #aaa;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #ddd;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #444;
+    color: white;
+    margin-bottom: 10px;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #ff8c00;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff8c00;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #e87c00;
+}
+
+.signup-link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.signup-link a {
+    color: #ff8c00;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .login-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .input-group input {
+        font-size: 14px;
+    }
+
+    .btn-login {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .player-container {
+        flex-direction: column;
+        align-items: center;
+        height: auto; /* Allow it to expand in column layout */
+    }
+
+    .player-image {
+        width: 80px;
+        height: 80px;
+        margin-top: 10px;
+    }
+}
+
+/* Styling for image (logo) */
+.logo {
+    width: 100px; /* Adjust the size of the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Space below the image */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Image responsive style for small screens */
+@media (max-width: 600px) {
+    .logo {
+        width: 80px; /* Adjust logo size on smaller screens */
+    }
+}
+
+/* Bottom Navigation Bar */
+.bottom-nav {
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #444;
+    z-index: 10; /* Ensure it's above other content */
+}
+
+/* Navigation Items */
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.nav-icon {
+    width: 40px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.nav-label {
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* Ensure there's space between bottom nav and content */
+body {
+    padding-bottom: 70px; /* Adjust this value based on the height of your bottom nav */
+}
+
+/* Menu Container */
+.menu-container {
+    background: #333;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    box-sizing: border-box;
+    padding-bottom: 80px; /* Provide space for the bottom nav */
+}
+
+/* Optional: Modal Styles */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    z-index: 1000; /* Ensure modals appear above all other content */
+}
+
+.modal-content {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.modal-close {
+    background-color: #ff8c00;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.modal-close:hover {
+    background-color: #e87c00;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+    .menu-container {
+        padding-bottom: 60px; /* Adjust padding on smaller screens */
+    }
+
+    .bottom-nav {
+        padding: 8px; /* Adjust bottom nav padding on small screens */
+    }
+
+    .modal {
+        width: 90%;
+        max-width: 350px;
+    }
+}

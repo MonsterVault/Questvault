@@ -1,0 +1,46 @@
+/* Gallery container */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
+    gap: 15px; /* Space between images */
+    padding: 20px,20px;
+ margin-top: 25px;
+}
+
+/* Style for each image and its label container */
+.image-gallery div {
+    display: flex;
+    flex-direction: column; /* Stack the image and label vertically */
+    align-items: center; /* Center align the image and label */
+    text-align: center; /* Center the label text */
+    margin: 5px; /* Spacing between images */
+}
+
+/* Anchor style */
+.image-gallery a {
+    display: block; /* Makes the anchor a block element */
+    text-decoration: none; /* Removes underline from the link */
+}
+
+/* Style for images inside the gallery */
+.image-gallery div img {
+    width: 45px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect to enlarge the image */
+.image-gallery div img:hover {
+    transform: scale(1.05);
+}
+
+/* Styling for the image labels */
+.image-label {
+    font-size: 14px; /* Adjust the font size as needed */
+    color: #ddd; /* Light color for the label */
+    margin-top: 5px; /* Space between the image and the label */
+    pointer-events: none; /* This makes the label unclickable */
+    display: block; /* Ensure the label takes up its own line */
+}
